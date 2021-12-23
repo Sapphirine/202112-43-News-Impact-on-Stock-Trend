@@ -84,9 +84,9 @@ $ pip install -r requirements.txt
 
 ### Usage
 
-You can use [news_process.ipynb](DataAnalyzing/NLPExperiment/news_process.ipynb) to run T5 and Bert models on news sentiment classification tasks.  
+You can use [news_process.ipynb](DataAnalyzing/NLPExperiment/news_process.ipynb) to run T5 and Bert models on news sentiment classification tasks.   Dataset can be accessed with the link https://drive.google.com/drive/folders/1Ec5jAJ6Bf8khQAcujbrPKGxZ20fAGkh4?usp=sharing
 
-To get dataset of NLP experiments, run [NLPdataset.py](DataCollection/NLPdataset.py) .
+To get dataset of NLP experiments by yourself, run [NLPdataset.py](DataCollection/NLPdataset.py) .
 
 You can use [regression.ipynb](DataAnalyzing/RegressionExperiment/regression.ipynb) to test more regression results on different features and stocks.
 
