@@ -1,0 +1,1 @@
+# 202112-43-News-Impact-on-Stock-Trend
