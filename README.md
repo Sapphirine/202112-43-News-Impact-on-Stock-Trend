@@ -87,11 +87,8 @@ You can use [news_process.ipynb](DataAnalyzing/NLPExperiment/news_process.ipynb)
 To get dataset of NLP experiments, run [NLPdataset.py](DataCollection/NLPdataset.py) .
 
 You can use [regression.ipynb](DataAnalyzing/RegressionExperiment/regression.ipynb) to test more regression results on different features and stocks.
-<div align="center">
 
 ## Visualization
-</div>
-
 ### Install
 To run the web server,  django framework need to be downloaded
 ```sh
