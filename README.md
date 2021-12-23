@@ -28,7 +28,6 @@ This repository contains:
     - [Usage](#usage-3)
 
 - [Authors](#authors)
-- [Contributing](#contributing)
 
 ## Background
 
