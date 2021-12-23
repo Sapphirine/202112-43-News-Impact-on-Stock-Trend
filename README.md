@@ -95,7 +95,7 @@ $ pip install django
 ```
 
 ### Usage
-After installation, cd to dir of trandsever 
+After installation, cd to folder [TREND](Visualization/TREND) and run the web server.
 ```sh
 $ cd visualization/TREND/
 $ python manage.py runserver
