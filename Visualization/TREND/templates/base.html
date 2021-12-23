@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/css/searchBox.css">
+<link rel="stylesheet" type="text/css" href="/static/css/revealStyle.css">
+<link rel="stylesheet" type="text/css" href="/static/css/buttonHoverStyle.css">
+<link rel="stylesheet" type="text/css" href="/static/css/picStyle.css">
+
+<head>
+    <title>TREND</title>
+    <meta charset="utf-8" />
+
+    <script src="{% static "js/echarts.js" %}"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="{% static "js/advCandlestickChart.js" %}"> </script>
+    <script src="{% static "js/newsChart.js" %}"> </script>
+    <div class="reveal" >TREND</div>
+
+    <div class="searchBox", style="display:none", id="searchBox">
+        <input class="inputBox" placeholder="tsla" id="inputBox">
+        <button
+                data-text="Search"
+                class="btn btn-primary btn-ghost btn-border-stroke  btn-text-float-up"
+                onclick="getValue()"
+        >
+            <div class="btn-borders">
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-bottom"></div>
+                <div class="border-left"></div>
+            </div>
+            <span class="btn-text">Search</span>
+        </button>
+    </div>
+</head>
+
+<style>
+    body,html,#div-chart{
+        width: 99%;
+        height: 100%;
+        font-family: "微软雅黑";
+        font-size: 12px;
+        background-color:#f0f0f0;
+    }
+    .chart{
+        width: 1200px;
+        height: 800px;
+    }
+</style>
+<body>
+<script src="{% static "js/initBase.js" %}"> </script>
+
+<div id="chart0" class='chart' style="position:relative;left:200px;top:50px; width: 1280px; height: 180px">
+</div>
+<div id="chart1" class='chart' style="position:absolute;left:0%;top:50%; width: 70%; height: 640px">
+</div>
+
+<div id="chart2" class="box", style="display: none">
+    <div class="head">
+        <span>related news</span>
+        <a href="#">more></a>
+    </div>
+    <ul>
+        <li>
+            <div class="deatil" id="detail1">
+            </div>
+            <img id="pic1" src="" width="240px" height="160px" alt=""/>
+        </li>
+        <li>
+            <div class="deatil" id="detail2"> </div>
+            <img id="pic2" src="" width="240px" height="160px" alt=""/>
+        </li>
+        <li>
+            <div class="deatil" id="detail3"></div>
+            <img id="pic3" src="" width="240px" height="160px" alt=""/>
+        </li>
+        <li>
+            <div class="deatil" id="detail4"></div>
+            <img id="pic4" src="" width="240px" height="160px" alt=""/>
+        </li>
+    </ul>
+</div>
+
+<script>
+    var Stocks_Data= {{ stocks_data | safe}}
+    var Stock_Data = Stocks_Data['tsla']
+    var Stocks_News ={{ stocks_news | safe}}
+    var Stock_News = Stocks_News['tsla']
+    var Stocks_Images = {{ stocks_images | safe}}
+    var Stock_Images = Stocks_Images['tsla']
+
+    function getValue()
+    {
+        var v = document.getElementById("inputBox");
+        var chart0 = document.getElementById("chart0");
+        chart0.style.display = "none"
+        var chart2 = document.getElementById("chart2");
+        chart2.style.display = "none"
+        stock_name = v.value.toLowerCase();
+        Stock_News = Stocks_News[stock_name];
+        Stock_Data = Stocks_Data[stock_name];
+        Stock_Images = Stocks_Images[stock_name];
+        buildCandlestickChart(Stock_Data,Stock_News, Stock_Images);
+    }
+</script>
+
+
+</body>
+</html>
