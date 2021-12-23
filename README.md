@@ -26,7 +26,7 @@ This repository contains:
 - [Visualization](#visualization)
     - [Install](#install-3)
     - [Usage](#usage-3)
-
+- [Others](#others)
 - [Authors](#authors)
 
 ## Background
@@ -102,7 +102,12 @@ $ python manage.py runserver
 ```
 Then open web browser  and enter http://localhost:8000/cover to see the homepage of our website
 
+Here is one screen shot of our web app: 
+![Alt text](https://github.com/Sapphirine/202112-43-News-Impact-on-Stock-Trend/blob/main/readmeImage/web_demo.png)
 
+
+## Others
+To know more details about our project, please check our youtube link: https://youtu.be/dYse7Cuao4Y
 
 
 
